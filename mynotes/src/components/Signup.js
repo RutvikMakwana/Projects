@@ -42,58 +42,60 @@ const Signup = (props) => {
     <div className="container  my-5">
       <h2>Signup to Continue</h2>
       <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="exampleInputEmail1">Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            name="email"
-            onChange={onChange}
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
+        <div className="my-3">
+          <div className="form-group">
+            <label htmlFor="exampleInputEmail1">Email address</label>
+            <input
+              type="email"
+              className="form-control"
+              id="exampleInputEmail1"
+              name="email"
+              onChange={onChange}
+              aria-describedby="emailHelp"
+              placeholder="Enter email"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              className="form-control"
+              id="name"
+              name="name"
+              onChange={onChange}
+              placeholder="Enter name"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              name="password"
+              onChange={onChange}
+              minLength={5}
+              required
+              placeholder="Password"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="cpassword">Confirm Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="cpassword"
+              name="cpassword"
+              onChange={onChange}
+              minLength={5}
+              required
+              placeholder="Confirm Password"
+            />
+          </div>
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
         </div>
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            className="form-control"
-            id="name"
-            name="name"
-            onChange={onChange}
-            placeholder="Enter name"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="password"
-            onChange={onChange}
-            minLength={5}
-            required
-            placeholder="Password"
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="cpassword">Confirm Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="cpassword"
-            name="cpassword"
-            onChange={onChange}
-            minLength={5}
-            required
-            placeholder="Confirm Password"
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
       </form>
     </div>
   );
